@@ -6,13 +6,13 @@ fun main(){
 
 fun agoToText(countSecond: Int): String {
     var rezStr:String = "";
-    when {
-        countSecond <= 60 -> rezStr = "только что";
-        countSecond > 60 && countSecond <= 60*60 -> rezStr = minutAgo(countSecond);
-        countSecond >= 60*60+1 && countSecond < 24*60*60 -> rezStr = hourAgo(countSecond);
-        countSecond >= 24*60*60 && countSecond <=24*60*60+1 -> rezStr = "вчера";
-        countSecond > 24*60*60+1 && countSecond <=24*60*60*2 -> rezStr = "позавчера";
-        countSecond > 24*60*60*2 -> rezStr = "давно";
+    rezStr = when(countSecond) {
+        in 0 .. 60 -> "только что";
+        in 60..60*60 -> minutAgo(countSecond);
+        in 60*60+1 .. 24*60*60 -> hourAgo(countSecond);
+        in 24*60*60 .. 24*60*60+1 -> "вчера";
+        in 24*60*60+1 .. 24*60*60*2 -> "позавчера";
+        else -> "давно";
     }
     return rezStr;
 }
