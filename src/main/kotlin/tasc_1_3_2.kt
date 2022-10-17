@@ -2,8 +2,8 @@
 fun main(){
     val cardType:String = "MasterCard";
     val action:Boolean = false;
-    var sumLastTransaction:Double = 20000.0;
-    var sumTransaction:Double = 13000.0;
+    var sumLastTransaction:Double = 15000.0;
+    var sumTransaction:Double = 150001.0;
 
     println(runTransaction(cardType,action,sumLastTransaction,sumTransaction));
 

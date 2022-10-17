@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>tasc_1_3_1.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homeWork_1_3_controlConstruction</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">tasc_1_3_1.kt</span></div><h1>tasc_1_3_1.kt</h1><pre class="source lang-java linenums">fun main(){
+<span class="nc" id="L2">    val countSecond = 172801;</span>
+
+<span class="nc" id="L4">    println(&quot;Р±С‹Р»(Р°) ${agoToText(countSecond)}&quot;);</span>
+<span class="nc" id="L5">}</span>
+
+fun agoToText(countSecond: Int): String {
+<span class="nc" id="L8">    var rezStr:String = &quot;&quot;;</span>
+<span class="nc" id="L9">    rezStr = when(countSecond) {</span>
+<span class="nc bnc" id="L10" title="All 6 branches missed.">        in 0 .. 60 -&gt; &quot;С‚РѕР»СЊРєРѕ С‡С‚Рѕ&quot;;</span>
+<span class="nc bnc" id="L11" title="All 6 branches missed.">        in 60..60*60 -&gt; minutAgo(countSecond);</span>
+<span class="nc bnc" id="L12" title="All 6 branches missed.">        in 60*60+1 .. 24*60*60 -&gt; hourAgo(countSecond);</span>
+<span class="nc bnc" id="L13" title="All 6 branches missed.">        in 24*60*60 .. 24*60*60+1 -&gt; &quot;РІС‡РµСЂР°&quot;;</span>
+<span class="nc bnc" id="L14" title="All 6 branches missed.">        in 24*60*60+1 .. 24*60*60*2 -&gt; &quot;РїРѕР·Р°РІС‡РµСЂР°&quot;;</span>
+<span class="nc" id="L15">        else -&gt; &quot;РґР°РІРЅРѕ&quot;;</span>
+    }
+<span class="nc" id="L17">    return rezStr;</span>
+}
+
+fun hourAgo(countSecond: Int): String {
+<span class="nc" id="L21">    val hourCount = countSecond / (60*60);</span>
+
+<span class="nc" id="L23">    var rezStr:String = &quot;РЅРµ РѕРїСЂРµРґРµР»РµРЅРѕ&quot;;</span>
+<span class="nc" id="L24">    when{</span>
+<span class="nc bnc" id="L25" title="All 4 branches missed.">        hourCount % 10 == 1 &amp;&amp; hourCount != 11 -&gt; rezStr = &quot;${hourCount} С‡Р°СЃ РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc bnc" id="L26" title="All 4 branches missed.">        hourCount % 10 &gt;= 2 &amp;&amp; hourCount &lt;= 4 -&gt; rezStr = &quot;${hourCount} С‡Р°СЃР° РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc bnc" id="L27" title="All 4 branches missed.">        hourCount % 10 &gt;= 5 &amp;&amp; hourCount % 10 == 0 -&gt; rezStr = &quot;${hourCount} С‡Р°СЃРѕРІ РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc" id="L28">        else -&gt; rezStr = &quot;${hourCount} С‡Р°СЃРѕРІ РЅР°Р·Р°Рґ&quot;;</span>
+    }
+<span class="nc" id="L30">    return rezStr;</span>
+}
+
+fun minutAgo(countSecond: Int): String {
+<span class="nc" id="L34">    var minuteCount = countSecond / 60;</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">    if(minuteCount == 0) minuteCount = 1;</span>
+<span class="nc" id="L36">    var rezStr:String = &quot;РЅРµ РѕРїСЂРµРґРµР»РµРЅРѕ&quot;;</span>
+<span class="nc" id="L37">    when{</span>
+<span class="nc bnc" id="L38" title="All 4 branches missed.">        minuteCount % 10 == 1 &amp;&amp; minuteCount != 11 -&gt; rezStr = &quot;${minuteCount} РјРёРЅСѓС‚Сѓ РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc bnc" id="L39" title="All 4 branches missed.">        minuteCount % 10 &gt;= 2 &amp;&amp; minuteCount &lt;= 4 -&gt; rezStr = &quot;${minuteCount} РјРёРЅСѓС‚С‹ РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc bnc" id="L40" title="All 4 branches missed.">        minuteCount % 10 &gt;= 5 &amp;&amp; minuteCount % 10 == 0 -&gt; rezStr = &quot;${minuteCount} РјРёРЅСѓС‚ РЅР°Р·Р°Рґ&quot;;</span>
+<span class="nc" id="L41">        else -&gt; rezStr = &quot;${minuteCount} РјРёРЅСѓС‚ РЅР°Р·Р°Рґ&quot;;</span>
+    }
+<span class="nc" id="L43">    return rezStr;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

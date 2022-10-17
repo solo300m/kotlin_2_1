@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tasc_1_3_2KtTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2022-10-17T12:57:04" hostname="DESKTOP-CU7RLI7" time="0.054">
+  <properties/>
+  <testcase name="runTransactionMasterCard()" classname="Tasc_1_3_2KtTest" time="0.03"/>
+  <testcase name="runTransactionMasterCardMaxTR()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="runTransactionMir()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="calcComision()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="getCardTypeAny()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="getCardTypeMir()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionVK()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionMasterCardMax()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionVKDef()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="runTransactionVKMax()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="calcComisionMaestro()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionVKMaxTR()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="calcComisionMir()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="getCardTypeVK()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="getCardTypeMasterCart()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="calcComisionMir35()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="getCardTypeMaestro()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionVisaMax()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="calcComisionVisa35()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="runTransactionMaestro()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="calcComisionVisa()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="getCardTypeVisa()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="runTransactionVisa()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <testcase name="calcComisionMaestroFalse()" classname="Tasc_1_3_2KtTest" time="0.001"/>
+  <testcase name="calcComisionVK()" classname="Tasc_1_3_2KtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
